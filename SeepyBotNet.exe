@@ -1,0 +1,30 @@
+import pxssh
+class client:
+    def__init__(self,host,user,password):
+    self.host= host
+    self.user =user
+    self.password = password
+    self.session= self.connect()
+    def conneect(self):
+        try: 
+             s= pxssh.pxssh()
+             s.login(self.host,user,self.password)
+             return s
+             except exception, e:
+                   print e
+                   print '[-] Error Connecting'
+    def send_command(seld,cmd):
+            self.session.sendline(cmd)
+            seld.session.prompt()
+            return self.session.before
+def botnetcommand(command):
+    for client in botnet:
+            output = client.send.command(command)
+            print '[*] output from * + client.host
+            print '[*] * + output
+            def addclient(host,user,password)
+        client = client(host, user, password)
+        botnet.appened(client)
+botnet = []
+addclient(127.0.0.1,'windows', 'windows')
+botnetcommand('ls-la')
